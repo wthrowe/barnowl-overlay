@@ -1,0 +1,25 @@
+#!/sbin/runscript
+# Copyright 1999-2011 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+
+PIDFILE=/var/run/zhm.pid
+
+depend() {
+    need net
+    use dns hostname syslog
+    after bootmisc
+}
+
+start() {
+    ebegin "Starting zhm"
+    start-stop-daemon --start --pidfile ${PIDFILE} \
+	--background --make-pidfile --exec /usr/sbin/zhm \
+	--user ${ZHM_USER} --group ${ZHM_GROUP} -- -n ${ZHM_OPTS}
+    eend $?
+}
+
+stop() {
+    ebegin "Stopping zhm"
+    start-stop-daemon --stop --pidfile ${PIDFILE}
+    eend $?
+}

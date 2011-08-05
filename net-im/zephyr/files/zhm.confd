@@ -1,0 +1,13 @@
+# /etc/conf.d/zhm
+
+# Options to pass to the zhm daemon
+# Non-option arguments are interpreted as server names, overriding those
+# reported by hesiod
+# If you built net-libs/zephyr without hesiod support, you will need to
+# specify servers here.
+ZHM_OPTS=""
+
+# User and group to run zhm as.  zhm should require no permissions, so it
+# should be safe to set these to nobody
+ZHM_USER="nobody"
+ZHM_GROUP="nobody"

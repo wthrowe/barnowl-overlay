@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <herd>no-herd</herd>
+  <maintainer>
+    <email>wtt6@cornell.edu</email>
+  </maintainer>
+  <use>
+    <flag name='zephyr'>Enable zephyr support</flag>
+    <flag name='irc'>Enable IRC support</flag>
+    <flag name='jabber'>Enable XMPP support</flag>
+    <flag name='twitter'>Enable Twitter support</flag>
+    <flag name='wordwrap'>Install the WordWrap style</flag>
+  </use>
+</pkgmetadata>

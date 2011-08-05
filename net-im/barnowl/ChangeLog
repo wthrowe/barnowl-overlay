@@ -1,0 +1,11 @@
+# ChangeLog for net-im/barnowl
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*barnowl-1.8_beta (05 Aug 2011)
+*barnowl-1.7.1-r2 (05 Aug 2011)
+
+  05 Aug 2011; William Throwe <wtt6@cornell.edu> +barnowl-1.7.1-r2.ebuild,
+  +barnowl-1.8_beta.ebuild, +metadata.xml:
+  Adding barnowl and dependencies to the new overlay.
+
