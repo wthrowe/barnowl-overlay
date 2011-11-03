@@ -1,4 +1,0 @@
-# William Throwe <wtt6@cornell.edu> (4 Aug 2011)
-# Betas have known major bugs.  Use at your own risk.
-# Will be removed when release candidiates come out.
->=net-im/barnowl-1.8_beta

@@ -6,8 +6,8 @@ EAPI=4
 
 inherit flag-o-matic autotools
 
-GIT_TAG="1.9dev"
-GIT_HASH="0325f59"
+#GIT_TAG=
+#GIT_HASH=
 
 DESCRIPTION="A curses-based IM client"
 HOMEPAGE="http://barnowl.mit.edu/"
@@ -52,10 +52,6 @@ else
 fi
 
 src_prepare() {
-	# The git tag isn't in quite the right place. (should be b711711)
-	# This appears to be the only necessary patch.
-	sed -i -e '/^AC_INIT/s/1.9dev/1.8dev/' configure.ac
-
 	use jabber || \
 		sed -i -e '/^MODULES =/s/Jabber//'   perl/modules/Makefile.am
 	use irc || \
