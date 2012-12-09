@@ -1,4 +1,4 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -19,7 +19,7 @@ else
 fi
 
 SLOT="0"
-LICENSE="DB LGPL-2"
+LICENSE="Sleepycat LGPL-2"
 KEYWORDS="~amd64 ~x86"
 IUSE="+zephyr irc jabber twitter wordwrap"
 
@@ -33,7 +33,7 @@ COMMON_DEPEND="dev-lang/perl
 			   dev-perl/glib-perl
 			   zephyr? ( net-im/zephyr )"
 DEPEND="${COMMON_DEPEND}
-		dev-util/pkgconfig
+		virtual/pkgconfig
 		app-arch/zip"
 RDEPEND="${COMMON_DEPEND}
 		 jabber? ( dev-perl/Net-DNS
