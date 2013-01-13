@@ -1,4 +1,4 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -16,7 +16,7 @@ HOMEPAGE="http://zephyr.1ts.org/"
 SRC_URI="http://zephyr.1ts.org/export/${SVN_REV}/distribution/${P}.tar.gz"
 
 SLOT="0"
-LICENSE="as-is"
+LICENSE="HPND"
 KEYWORDS="~amd64 ~x86"
 IUSE="ares +hesiod kerberos X"
 
