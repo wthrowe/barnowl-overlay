@@ -1,4 +1,4 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -18,11 +18,11 @@ SRC_URI="http://zephyr.1ts.org/export/${SVN_REV}/distribution/${P}.tar.gz"
 SLOT="0"
 LICENSE="HPND"
 KEYWORDS="~amd64 ~x86"
-IUSE="ares +hesiod kerberos X"
+IUSE="ares +hesiod X"
 
 RDEPEND="ares? ( net-dns/c-ares )
 		 hesiod? ( net-dns/hesiod )
-		 kerberos? ( app-crypt/mit-krb5 )
+		 app-crypt/mit-krb5
 		 X? ( x11-libs/libX11 )"
 DEPEND="${RDEPEND}"
 
@@ -32,10 +32,10 @@ RESTRICT="test"
 src_configure() {
 	econf \
 		--without-krb4 \
+		--with-krb5 \
 		--without-regex \
 		$(use_with ares cares) \
 		$(use_with hesiod) \
-		$(use_with kerberos krb5) \
 		$(use_with X x)
 }
 
