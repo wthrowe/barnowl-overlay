@@ -4,7 +4,7 @@
 
 EAPI=6
 
-inherit autotools eutils
+inherit autotools
 
 #GIT_TAG=
 #GIT_HASH=
@@ -75,7 +75,7 @@ src_prepare() {
 	rm perl/modules/Facebook/lib/Ouch.pm || die
 	rm -r perl/modules/Facebook/lib/URI || die
 	# and 5 copies of Module::Install
-	epatch "${FILESDIR}/${P}-system-Module-Install.patch" # only use of eutils
+	eapply "${FILESDIR}/${P}-system-Module-Install.patch"
 	find . -name inc | xargs rm -r || die
 
 	use jabber || \
@@ -89,6 +89,8 @@ src_prepare() {
 	use facebook || \
 		sed -i -e '/^MODULES =/s/Facebook//' perl/modules/Makefile.am
 	eautoreconf
+
+	eapply_user
 }
 
 src_configure() {
