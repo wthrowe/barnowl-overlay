@@ -1,4 +1,4 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -43,7 +43,7 @@ RDEPEND="${COMMON_DEPEND}
 		 twitter? ( dev-perl/HTML-Parser
 					dev-perl/Net-Twitter-Lite )
 		 irc? ( dev-perl/AnyEvent-IRC )
-		 wordwrap? ( dev-perl/text-autoformat )"
+		 wordwrap? ( dev-perl/Text-Autoformat )"
 
 if [ -n "${GIT_HASH}" ] ; then
 	S="${WORKDIR}/barnowl-barnowl-${GIT_HASH}"

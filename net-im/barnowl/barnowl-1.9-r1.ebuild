@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=4
+EAPI=6
 
 inherit autotools eutils
 
@@ -23,10 +23,10 @@ LICENSE="Sleepycat LGPL-2"
 KEYWORDS="~amd64 ~x86"
 IUSE="+zephyr facebook irc jabber twitter wordwrap"
 
-COMMON_DEPEND="dev-lang/perl
-			   dev-libs/openssl
-			   dev-libs/glib
-			   sys-libs/ncurses[unicode]
+COMMON_DEPEND="dev-lang/perl:=
+			   dev-libs/openssl:0=
+			   dev-libs/glib:2
+			   sys-libs/ncurses:0=[unicode]
 			   dev-perl/PAR
 			   dev-perl/Class-Accessor
 			   dev-perl/AnyEvent
