@@ -1,19 +1,17 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=2
+EAPI=6
 
 #WANT_AUTOCONF="2.5"
 #WANT_AUTOMAKE="none"
 
 #inherit autotools
 
-SVN_REV=2642
-
 DESCRIPTION="The Project Athena instant messaging system"
 HOMEPAGE="http://zephyr.1ts.org/"
-SRC_URI="http://zephyr.1ts.org/export/${SVN_REV}/distribution/${P}.tar.gz"
+SRC_URI="https://github.com/zephyr-im/zephyr/archive/release/${PV}.tar.gz -> ${P}.tar.gz"
 
 SLOT="0"
 LICENSE="HPND"
@@ -25,6 +23,8 @@ RDEPEND="ares? ( net-dns/c-ares )
 		 app-crypt/mit-krb5
 		 X? ( x11-libs/libX11 )"
 DEPEND="${RDEPEND}"
+
+S="${WORKDIR}/${PN}-release-${PV}"
 
 # tests require a running zhm daemon
 RESTRICT="test"
