@@ -6,7 +6,5 @@
   </maintainer>
   <use>
     <flag name="ares">Use <pkg>net-dns/c-ares</pkg> in clients</flag>
-    <flag name="hesiod">Enable server locating using
-      <pkg>net-den/hesiod</pkg></flag>
   </use>
 </pkgmetadata>
