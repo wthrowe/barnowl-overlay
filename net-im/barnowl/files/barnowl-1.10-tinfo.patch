@@ -1,0 +1,10 @@
+--- a/configure.ac	2019-02-03 20:58:44.000000000 -0500
++++ b/configure.ac	2020-05-12 00:59:33.849772600 -0400
+@@ -42,6 +42,7 @@
+     ])])
+ 
+ AC_CHECK_LIB(ncursesw, initscr,, AC_MSG_ERROR(No libncursesw found.))
++AC_CHECK_LIB(tinfo, main) # Always link if present
+ AC_CHECK_LIB(panelw, update_panels,, AC_MSG_ERROR(No libpanelw found.))
+ AC_SEARCH_LIBS([gethostbyname], [nsl])
+ AC_SEARCH_LIBS([socket], [socket])

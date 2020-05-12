@@ -6,7 +6,6 @@
   </maintainer>
   <use>
     <flag name='zephyr'>Enable zephyr support</flag>
-    <flag name='facebook'>Enable Facebook support</flag>
     <flag name='irc'>Enable IRC support</flag>
     <flag name='jabber'>Enable XMPP support</flag>
     <flag name='twitter'>Enable Twitter support</flag>
