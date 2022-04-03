@@ -1,4 +1,4 @@
-# Copyright 1999-2020 Gentoo Authors
+# Copyright 1999-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -21,7 +21,7 @@ IUSE="+zephyr irc jabber twitter wordwrap"
 COMMON_DEPEND="dev-lang/perl:=
 			   dev-libs/openssl:0=
 			   dev-libs/glib:2
-			   sys-libs/ncurses:0=[unicode]
+			   sys-libs/ncurses:0=
 			   dev-perl/AnyEvent
 			   dev-perl/Class-Accessor
 			   dev-perl/glib-perl
