@@ -16,7 +16,7 @@ IUSE="ares X"
 RDEPEND="ares? ( net-dns/c-ares )
 		 app-crypt/mit-krb5
 		 X? ( x11-libs/libX11 )
-		 sys-libs/libncurses"
+		 sys-libs/ncurses"
 DEPEND="${RDEPEND}
 		sys-devel/bison"
 
