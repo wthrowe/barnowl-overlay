@@ -16,7 +16,7 @@ IUSE="ares X"
 RDEPEND="ares? ( net-dns/c-ares )
 		 app-crypt/mit-krb5
 		 X? ( x11-libs/libX11 )
-		 sys-libs/libtermcap-compat"
+		 sys-libs/libncurses"
 DEPEND="${RDEPEND}
 		sys-devel/bison"
 
@@ -24,6 +24,12 @@ S="${WORKDIR}/${PN}-release-${PV}"
 
 # tests require a running zhm daemon
 RESTRICT="test"
+
+src_prepare() {
+	sed -i /AC_CHECK_LIB/s/curses/tinfo/g configure.ac || die
+	eapply_user
+	eautoreconf
+}
 
 src_configure() {
 	econf \
