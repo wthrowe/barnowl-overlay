@@ -4,7 +4,7 @@
 
 EAPI=8
 
-MODULE_AUTHOR=KAZUHO
+DIST_AUTHOR=KAZUHO
 inherit perl-module
 
 DESCRIPTION="Perl version of Python's URL-safe base64 codec"

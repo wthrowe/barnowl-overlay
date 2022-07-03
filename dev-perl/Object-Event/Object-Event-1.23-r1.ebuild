@@ -4,7 +4,7 @@
 
 EAPI=8
 
-MODULE_AUTHOR=ELMEX
+DIST_AUTHOR=ELMEX
 inherit perl-module
 
 DESCRIPTION="A class that provides an event callback interface"

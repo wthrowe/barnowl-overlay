@@ -4,7 +4,7 @@
 
 EAPI=8
 
-MODULE_AUTHOR=RIZEN
+DIST_AUTHOR=RIZEN
 inherit perl-module
 
 DESCRIPTION="Exceptions that don't hurt"
