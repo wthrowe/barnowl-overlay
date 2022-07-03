@@ -1,7 +1,8 @@
 # Copyright 1999-2022 Gentoo Authors
+# Copyright 2022 William Throwe
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 
 inherit autotools
 
@@ -16,7 +17,7 @@ S="${WORKDIR}/${PN}-${GIT_HASH}"
 SLOT="0"
 LICENSE="Sleepycat LGPL-2"
 KEYWORDS="~amd64 ~x86"
-IUSE="+zephyr irc jabber twitter wordwrap"
+IUSE="+zephyr irc jabber wordwrap"
 
 COMMON_DEPEND="dev-lang/perl:=
 			   dev-libs/openssl:0=
@@ -38,8 +39,6 @@ RDEPEND="${COMMON_DEPEND}
 		 jabber? ( dev-perl/Net-DNS
 				   dev-perl/Authen-SASL
 				   dev-perl/IO-Socket-SSL )
-		 twitter? ( dev-perl/HTML-Parser
-					dev-perl/Net-Twitter-Lite )
 		 irc? ( dev-perl/AnyEvent-IRC )
 		 wordwrap? ( dev-perl/Text-Autoformat )"
 
@@ -60,8 +59,8 @@ src_prepare() {
 		sed -i -e '/^MODULES =/s/IRC//'      perl/modules/Makefile.am
 	use wordwrap || \
 		sed -i -e '/^MODULES =/s/WordWrap//' perl/modules/Makefile.am
-	use twitter || \
-		sed -i -e '/^MODULES =/s/Twitter//'  perl/modules/Makefile.am
+	# Twitter API is out-of-date
+	sed -i -e '/^MODULES =/s/Twitter//'  perl/modules/Makefile.am
 	# Facbook module is currently broken.
 	sed -i -e '/^MODULES =/s/Facebook//' perl/modules/Makefile.am
 

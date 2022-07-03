@@ -8,7 +8,6 @@
     <flag name='zephyr'>Enable zephyr support</flag>
     <flag name='irc'>Enable IRC support</flag>
     <flag name='jabber'>Enable XMPP support</flag>
-    <flag name='twitter'>Enable Twitter support</flag>
     <flag name='wordwrap'>Install the WordWrap style</flag>
   </use>
 </pkgmetadata>
