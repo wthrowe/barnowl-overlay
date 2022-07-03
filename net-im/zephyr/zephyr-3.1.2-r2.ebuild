@@ -4,6 +4,8 @@
 
 EAPI=8
 
+inherit autotools
+
 DESCRIPTION="The Project Athena instant messaging system"
 HOMEPAGE="https://github.com/zephyr-im"
 SRC_URI="https://github.com/zephyr-im/zephyr/archive/release/${PV}.tar.gz -> ${P}.tar.gz"
