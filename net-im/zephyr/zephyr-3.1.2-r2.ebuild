@@ -15,7 +15,8 @@ IUSE="ares X"
 
 RDEPEND="ares? ( net-dns/c-ares )
 		 app-crypt/mit-krb5
-		 X? ( x11-libs/libX11 )"
+		 X? ( x11-libs/libX11 )
+		 sys-libs/libtermcap-compat"
 DEPEND="${RDEPEND}
 		sys-devel/bison"
 
