@@ -16,7 +16,8 @@ IUSE="ares X"
 RDEPEND="ares? ( net-dns/c-ares )
 		 app-crypt/mit-krb5
 		 X? ( x11-libs/libX11 )"
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+		sys-devel/bison"
 
 S="${WORKDIR}/${PN}-release-${PV}"
 
